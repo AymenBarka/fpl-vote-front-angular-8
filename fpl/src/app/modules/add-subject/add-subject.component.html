@@ -1,0 +1,40 @@
+<section id="container">
+    <section id="main-content">
+      <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> Add new Subject</h3>
+        <!-- BASIC FORM VALIDATION -->
+        <div class="row mt">
+          <div class="col-lg-12">
+            <div class="form-panel">
+              <form [formGroup]="form">
+  
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Title" formControlName="titre" required>
+                  <mat-error *ngIf="form.hasError('required', 'titre')">
+                    Title of Subject is required *
+                  </mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Desciption..." rows="2" cols="50" formControlName="description"
+                    required>
+                  <mat-error *ngIf="form.hasError('required', 'description')">
+                    Description of Subject is required *
+                  </mat-error>
+                </mat-form-field>
+                <br>
+                
+  
+                
+                 
+                
+               
+                <button class="btn btn-theme float-right" (click)="addSubject()">Save</button>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
